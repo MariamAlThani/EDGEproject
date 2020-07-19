@@ -1,0 +1,12 @@
+print("Welcome to The Dream Chapter: The Game!")
+name = input("What is your name? ")
+print("Hello,", name, "!")
+age = int(input("How old are you? " ))
+if age >= 16 :
+  print("You are old enough to play!")
+  wants_to_play = input("Do you want to play a game? ").lower()
+  if wants_to_play == "yes" :
+     print("Let's play..\n")
+  else :
+      print("Maybe next time!")
+      
