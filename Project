@@ -9,4 +9,8 @@ if age >= 16 :
      print("Let's play..\n")
   else :
       print("Maybe next time!")
-      
+else :
+    print("You are not old enough to play.")
+if wants_to_play == "yes" :
+    print("Welcome to the first stage of The Dream Chapter: The Game. This stage is titled Star. Good luck. \n\nYou wake up to head to your final day of school, you can either walk or go by train.\n ")
+first_choice = input( "Which do you choose? ").lower()
