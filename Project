@@ -35,58 +35,58 @@ if first_choice == "walk" :
     print("While walking, you decide to listen to some music to distract you from your thoughts. You only listen to R&B and Metal")
     music_choice = input("Which do you choose? ")
     if music_choice == "R&B".lower():
-        chances = 0
+        cchances = 0
         cat_eye_ans = "purple"
         print("""\nGood choice! The songs clear your head yet still allow room for the world's background noise.
-
+    
             The background noise gets louder as you reach closer to the school. Suddenly, you trip on a slab of broken concrete. Getting up, more confused than hurt, you look up at a rather large black cat.
-
+            
             The cat's eye color differed greatly from other cat's, which was incredibly odd, the vibrant color is known to some as the color of evil """)
-        while chances < 3:
+        while chances < 3: 
             cat_eye = input("can you guess what the cats eye color is (You have three chances)? ")
-
-            if cat_eye == cat_eye_ans:
-
-                print("Congratulations. You guessed correctly!")
-                break
+        
+            if cat_eye == cat_eye_ans: 
+            
+                print("Congratulations. You guessed correctly!") 
                 print("Moving on, you check the time and notice that you are running late! You quickly get up and speedily walk to school, ignoring your surroundings completely.\n With the cat on your tail the entirety of the way, you finally reach the school")
                 print("\n This was the end of the first stage, Star. \n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
-            else:
-                print("Your guess was incorrect. Try again!")
-
+            else: 
+                print("Your guess was incorrect. Try again!") 
+                cat_eye = input("can you guess what the cats eye color is (You have three chances)? ")
+        
             chances += 1
-
-            if not chances < 3:
+            
+            if not chances < 3: 
                 print("Too bad, you lost this time. Try again next time!. The correct answer was", cat_eye_ans)
+                break 
 
-
+       
     else:
         chances = 0
         cat_eye_ans = "purple"
-            print("""\n Good choice! While you feel like it may be too early in the morning for Metal music, it gets you excited for your final day!
-
+        print("""\n Good choice! While you feel like it may be too early in the morning for Metal music, it gets you excited for your final day!
+    
             The background noise gets louder as you reach closer to the school. Suddenly, you trip on a slab of broken concrete. Getting up, confused, you look up at a rather large black cat.
-
+            
             The cat's eye color differed greatly from other cat's, which was incredibly odd, the vibrant color is known to some as the color of evil """)
-        while chances < 3:
+        while chances < 3: 
             cat_eye = input("can you guess what the cats eye color is (You have three chances)? ")
-
-            if cat_eye == cat_eye_ans:
-
-                print("Congratulations. You guessed correctly!")
-                break
+        
+            if cat_eye == cat_eye_ans: 
+            
+                print("Congratulations. You guessed correctly!") 
                 print("Moving on, you check the time and notice that you are running late! You quickly get up and speedily walk to school, ignoring your surroundings completely.\n With the cat on your tail the entirety of the way, you finally reach the school")
                 print("\n This was the end of the first stage, Star. \n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
-
-
-            else:
-                print("Your guess was incorrect. Try again!")
-
+                
+                
+            else: 
+                print("Your guess was incorrect. Try again!") 
+                cat_eye = input("can you guess what the cats eye color is (You have three chances)? ")
+        
             chances += 1
-
-        if not chances < 3:
+            
+        if not chances < 3: 
             print("Too bad, you lost this time. Try again next time!. The correct answer was", cat_eye_ans)
-
 else:
     print("You have chosen to take the train.")
     print("""On your way to the train, you notice a boy following you, you think you have seen him before but are not sure. Now, you have two options:
