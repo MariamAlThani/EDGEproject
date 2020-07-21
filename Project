@@ -14,3 +14,112 @@ else :
 if wants_to_play == "yes" :
     print("Welcome to the first stage of The Dream Chapter: The Game. This stage is titled Star. Good luck. \n\nYou wake up to head to your final day of school, you can either walk or go by train.\n ")
 first_choice = input( "Which do you choose? ").lower()
+print("Welcome to The Dream Chapter: The Game!")
+name = input("What is your name? ")
+print("Hello,", name, "!")
+age = int(input("How old are you? " ))
+if age >= 16 :
+  print("You are old enough to play!")
+  wants_to_play = input("Do you want to play a game? ").lower()
+  if wants_to_play == "yes" :
+     print("Let's play..\n")
+  else :
+      print("Maybe next time!")
+else :
+    print("You are not old enough to play.")
+if wants_to_play == "yes" :
+    print("Welcome to the first stage of The Dream Chapter: The Game. This stage is titled Star. Good luck. \n\nYou wake up to head to your final day of school, you can either walk or go by train.\n ")
+first_choice = input( "Which do you choose? ").lower()
+if first_choice == "walk" :
+    print("You have chosen to walk.")
+    print("While walking, you decide to listen to some music to distract you from your thoughts. You only listen to R&B and Metal")
+    music_choice = input("Which do you choose? ")
+    if music_choice == "R&B".lower():
+        chances = 0
+        cat_eye_ans = "purple"
+        print("""\nGood choice! The songs clear your head yet still allow room for the world's background noise.
+
+            The background noise gets louder as you reach closer to the school. Suddenly, you trip on a slab of broken concrete. Getting up, more confused than hurt, you look up at a rather large black cat.
+
+            The cat's eye color differed greatly from other cat's, which was incredibly odd, the vibrant color is known to some as the color of evil """)
+        while chances < 3:
+            cat_eye = input("can you guess what the cats eye color is (You have three chances)? ")
+
+            if cat_eye == cat_eye_ans:
+
+                print("Congratulations. You guessed correctly!")
+                break
+                print("Moving on, you check the time and notice that you are running late! You quickly get up and speedily walk to school, ignoring your surroundings completely.\n With the cat on your tail the entirety of the way, you finally reach the school")
+                print("\n This was the end of the first stage, Star. \n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
+            else:
+                print("Your guess was incorrect. Try again!")
+
+            chances += 1
+
+            if not chances < 3:
+                print("Too bad, you lost this time. Try again next time!. The correct answer was", cat_eye_ans)
+
+
+    else:
+        chances = 0
+        cat_eye_ans = "purple"
+            print("""\n Good choice! While you feel like it may be too early in the morning for Metal music, it gets you excited for your final day!
+
+            The background noise gets louder as you reach closer to the school. Suddenly, you trip on a slab of broken concrete. Getting up, confused, you look up at a rather large black cat.
+
+            The cat's eye color differed greatly from other cat's, which was incredibly odd, the vibrant color is known to some as the color of evil """)
+        while chances < 3:
+            cat_eye = input("can you guess what the cats eye color is (You have three chances)? ")
+
+            if cat_eye == cat_eye_ans:
+
+                print("Congratulations. You guessed correctly!")
+                break
+                print("Moving on, you check the time and notice that you are running late! You quickly get up and speedily walk to school, ignoring your surroundings completely.\n With the cat on your tail the entirety of the way, you finally reach the school")
+                print("\n This was the end of the first stage, Star. \n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
+
+
+            else:
+                print("Your guess was incorrect. Try again!")
+
+            chances += 1
+
+        if not chances < 3:
+            print("Too bad, you lost this time. Try again next time!. The correct answer was", cat_eye_ans)
+
+else:
+    print("You have chosen to take the train.")
+    print("""On your way to the train, you notice a boy following you, you think you have seen him before but are not sure. Now, you have two options:
+
+       (1) Keep walking and don’t think much of it
+       (2) Turn around and open a conversation in an attempt to scare him""")
+boy_choice = str(input("Which number option do you choose? "))
+if boy_choice == "1":
+    print(""""You have chosen the first option and continue walking. You finally enter the train station and everything passes by normally until you try to use your train card. The machine says user doesn't exist. That's odd,it has always worked before, why doesn't it work today? After many attempts you give up and turn away.
+	 As you are about to leave the station the boy following you yells, wait"+ name, "You can't miss your train, you'll be late for school!”
+	Obviously very startled, you asked the boy a range of questions asking who he was and how he knew you.""")
+    boy_name = str(input("Enter what you would like the boy's name to be."))
+    print("He introduced himself as" + boy_name, "and explained that he had always been in your class but rarely spoke.\n" "Moving on, you ask him how you can enter the train without your card and he asks you to hold the end of his bag-pack and follow him. now, you have two options:"
+    "(1) Reaching school on time by following" +boy_name, "and seeing how he gets you two on the train"
+	"(2) Being late to school by Insisting that you would rather not go through the trouble of a random adventure before school and simply walking instead")
+    time_choice = str(input("Which number option do you choose? "))
+    if time_choice == "1":
+        print("You have chosen the first option and follow" + boy_name,"trying to enter the train and will reach school on time.")
+        print("You hold onto his bag like he asked and suddenly, you felt as though you were invisible. You paid no mind to it and just followed him. No one noticed you as he went through the entrance and entered the train. This was all very confusing and frankly it was tiring as well but nevertheless, at least you got on the train, right?")
+        print("\n This was the end of the first stage, Star.\n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
+    elif time_choice == "2":
+        print("You have chosen the second option and refuse the boy's help, leaving the station and walking to school instead. You end up being late. As you exit the station, you notice the sun has gone down and it is night time. What?")
+        print("\n This was the end of the first stage, Star.\n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
+    else:
+        print("Your response is invalid. Please ensure you are answering with one of the two numbers.")
+        str(input("Which number option you choose? "))
+
+elif boy_choice == "2":
+    print("You have chosen the second option and turn around to talk to the boy.\n You ask him what his name is and where he is going.")
+    boy_name = str(input("Enter what you would like the boy's name to be."))
+    print("He casually introduced himself as" + boy_name, "and explained that he had always been in your class but rarely spoke and was going to school, same as you. With nothing better to do, you walk with him and talk to him all the way until you reach the station, resulting in you learning a lot of interesting things about him. Such as the fact that he was born with an illness giving him naturally purple hair and piercing yellow eyes. You wondered how you could ignore something like that for years...\n From then on, everything was normal.")
+    print("\n This was the end of the first stage, Star.\n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.\nYou enter the train with" +boy_name, "and sit next to each other, continuing your conversations from earlier\n ")
+
+else:
+    print("Your response is invalid. Please ensure you are answering with one of the two numbers.")
+    str(input("Which number option you choose? "))
