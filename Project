@@ -1,19 +1,4 @@
-print("Welcome to The Dream Chapter: The Game!")
-name = input("What is your name? ")
-print("Hello,", name, "!")
-age = int(input("How old are you? " ))
-if age >= 16 :
-  print("You are old enough to play!")
-  wants_to_play = input("Do you want to play a game? ").lower()
-  if wants_to_play == "yes" :
-     print("Let's play..\n")
-  else :
-      print("Maybe next time!")
-else :
-    print("You are not old enough to play.")
-if wants_to_play == "yes" :
-    print("Welcome to the first stage of The Dream Chapter: The Game. This stage is titled Star. Good luck. \n\nYou wake up to head to your final day of school, you can either walk or go by train.\n ")
-first_choice = input( "Which do you choose? ").lower()
+import sys 
 print("Welcome to The Dream Chapter: The Game!")
 name = input("What is your name? ")
 print("Hello,", name, "!")
@@ -31,13 +16,13 @@ if wants_to_play == "yes" :
     print("Welcome to the first stage of The Dream Chapter: The Game. This stage is titled Star. Good luck. \n\nYou wake up to head to your final day of school, you can either walk or go by train.\n ")
 first_choice = input( "Which do you choose? ").lower()
 if first_choice == "walk" :
-    print("You have chosen to walk.")
+    print("You have chosen to walk.") 
     print("While walking, you decide to listen to some music to distract you from your thoughts. You only listen to R&B and Metal")
     music_choice = input("Which do you choose? ")
     if music_choice == "R&B".lower():
-        cchances = 0
+        chances = 0
         cat_eye_ans = "purple"
-        print("""\nGood choice! The songs clear your head yet still allow room for the world's background noise.
+        print("""Good choice! The songs clear your head yet still allow room for the world's background noise.
     
             The background noise gets louder as you reach closer to the school. Suddenly, you trip on a slab of broken concrete. Getting up, more confused than hurt, you look up at a rather large black cat.
             
@@ -47,9 +32,31 @@ if first_choice == "walk" :
         
             if cat_eye == cat_eye_ans: 
             
-                print("Congratulations. You guessed correctly!") 
-                print("Moving on, you check the time and notice that you are running late! You quickly get up and speedily walk to school, ignoring your surroundings completely.\n With the cat on your tail the entirety of the way, you finally reach the school")
-                print("\n This was the end of the first stage, Star. \n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
+                print("""Congratulations. You guessed correctly!
+Moving on, you check the time and notice that you are running late! You quickly get up and speedily walk to school, ignoring your surroundings completely.
+With the cat on your tail the entirety of the way, you finally reach the school.
+
+This was the end of the first stage, Star.
+Welcome to the second and final stage of The Dream Chapter: The Game. 
+This stage is titled Magic for Eternity. Good luck.
+
+You run into the school entrance, barely noticing the fact that the sun was already setting behind you.
+You had a bigger worry on your mind, where was everyone?
+You check your phone but there's no cell service, what was going on? why was it already sunset??
+You sit by your desk for some reason as it seems like the only normal thing you managed to do today. You lay your head on the desk and doze off as the sun sets.
+Hours later, you wake up to the sounds of distant shrieking, immediately you run towards it and you end up in the school pool. 
+The cat was slowly drowning in the pool, Quickly! choose one of the two options!
+
+	(1) Jump into the pool and save the cat
+	(2) Run and try to find help. """)
+                pool_choice = str(input("Which number option do you choose? "))
+                if pool_choice == ("1"):
+                    print("You have chosen the first option and jump into the pool to save the cat. After opening your eyes you notice that what felt like a pool became a hole. A deep, dark endless black hole. There was no light and no cat. All you could feel was yourself yelling in fear as you fall down. You close your eyes again and suddenly wake up. It was all a dream. Or would you call it a nightmare? GAME OVER.")
+                elif pool_choice == ("2"):
+                    print("You have chosen the second option and run to get help. You spot a purple light at the end of the hall with a tall figure in front of it. You run towards it yelling for help. As you reach closer and closer to the end of the hall, the figure lights a match and throws it on the floor. You try to run as the fire engulfs the ground behind you but fail to escape. GAME OVER.")
+                else: 
+                    print("Your response is invalid. Please ensure you are answering with one of the two numbers.")
+                    str(input("Which number option you choose? "))
             else: 
                 print("Your guess was incorrect. Try again!") 
                 cat_eye = input("can you guess what the cats eye color is (You have three chances)? ")
@@ -64,7 +71,7 @@ if first_choice == "walk" :
     else:
         chances = 0
         cat_eye_ans = "purple"
-        print("""\n Good choice! While you feel like it may be too early in the morning for Metal music, it gets you excited for your final day!
+        print("""Good choice! While you feel like it may be too early in the morning for Metal music, it gets you excited for your final day!
     
             The background noise gets louder as you reach closer to the school. Suddenly, you trip on a slab of broken concrete. Getting up, confused, you look up at a rather large black cat.
             
@@ -74,52 +81,185 @@ if first_choice == "walk" :
         
             if cat_eye == cat_eye_ans: 
             
-                print("Congratulations. You guessed correctly!") 
-                print("Moving on, you check the time and notice that you are running late! You quickly get up and speedily walk to school, ignoring your surroundings completely.\n With the cat on your tail the entirety of the way, you finally reach the school")
-                print("\n This was the end of the first stage, Star. \n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
+                print("""Congratulations. You guessed correctly!
+Moving on, you check the time and notice that you are running late! You quickly get up and speedily walk to school, ignoring your surroundings completely.
+With the cat on your tail the entirety of the way, you finally reach the school.
+
+This was the end of the first stage, Star.
+Welcome to the second and final stage of The Dream Chapter: The Game. 
+This stage is titled Magic for Eternity. Good luck.
+
+You run into the school entrance, barely noticing the fact that the sun was already setting behind you.
+You had a bigger worry on your mind, where was everyone?
+You check your phone but there's no cell service, what was going on? why was it already sunset??
+You sit by your desk for some reason as it seems like the only normal thing you managed to do today. You lay your head on the desk and doze off as the sun sets.
+Hours later, you wake up to the sounds of distant shrieking, immediately you run towards it and you end up in the school pool. 
+The cat was slowly drowning in the pool, Quickly! choose one of the two options!
+
+	(1) Jump into the pool and save the cat
+	(2) Run and try to find help. """)
                 
-                
+                pool_choice = str(input("Which number option do you choose? "))
+                if pool_choice == ("1"):
+                    print("You have chosen the first option and jump into the pool to save the cat. After opening your eyes you notice that what felt like a pool became a hole. A deep, dark endless black hole. There was no light and no cat. All you could feel was yourself yelling in fear as you fall down. You close your eyes again and suddenly wake up. It was all a dream. Or would you call it a nightmare? GAME OVER.")
+                    break
+                elif pool_choice == ("2"):
+                    print("You have chosen the second option and run to get help. You spot a purple light at the end of the hall with a tall figure in front of it. You run towards it yelling for help. As you reach closer and closer to the end of the hall, the figure lights a match and throws it on the floor. You try to run as the fire engulfs the ground behind you but fail to escape. GAME OVER.")
+                    break 
+                else: 
+                    print("Your response is invalid. Please ensure you are answering with one of the two numbers.")
+                    str(input("Which number option you choose? "))
             else: 
                 print("Your guess was incorrect. Try again!") 
                 cat_eye = input("can you guess what the cats eye color is (You have three chances)? ")
-        
+                
             chances += 1
             
         if not chances < 3: 
             print("Too bad, you lost this time. Try again next time!. The correct answer was", cat_eye_ans)
-else:
+       
+else: 
     print("You have chosen to take the train.")
     print("""On your way to the train, you notice a boy following you, you think you have seen him before but are not sure. Now, you have two options:
 
        (1) Keep walking and don’t think much of it
        (2) Turn around and open a conversation in an attempt to scare him""")
-boy_choice = str(input("Which number option do you choose? "))
-if boy_choice == "1":
-    print(""""You have chosen the first option and continue walking. You finally enter the train station and everything passes by normally until you try to use your train card. The machine says user doesn't exist. That's odd,it has always worked before, why doesn't it work today? After many attempts you give up and turn away.
-	 As you are about to leave the station the boy following you yells, wait"+ name, "You can't miss your train, you'll be late for school!”
-	Obviously very startled, you asked the boy a range of questions asking who he was and how he knew you.""")
-    boy_name = str(input("Enter what you would like the boy's name to be."))
-    print("He introduced himself as" + boy_name, "and explained that he had always been in your class but rarely spoke.\n" "Moving on, you ask him how you can enter the train without your card and he asks you to hold the end of his bag-pack and follow him. now, you have two options:"
-    "(1) Reaching school on time by following" +boy_name, "and seeing how he gets you two on the train"
-	"(2) Being late to school by Insisting that you would rather not go through the trouble of a random adventure before school and simply walking instead")
-    time_choice = str(input("Which number option do you choose? "))
-    if time_choice == "1":
-        print("You have chosen the first option and follow" + boy_name,"trying to enter the train and will reach school on time.")
-        print("You hold onto his bag like he asked and suddenly, you felt as though you were invisible. You paid no mind to it and just followed him. No one noticed you as he went through the entrance and entered the train. This was all very confusing and frankly it was tiring as well but nevertheless, at least you got on the train, right?")
-        print("\n This was the end of the first stage, Star.\n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
-    elif time_choice == "2":
-        print("You have chosen the second option and refuse the boy's help, leaving the station and walking to school instead. You end up being late. As you exit the station, you notice the sun has gone down and it is night time. What?")
-        print("\n This was the end of the first stage, Star.\n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.")
-    else:
+    boy_choice = str(input("Which number option do you choose? "))
+    if boy_choice == "1":
+        print(""""You have chosen the first option and continue walking. You finally enter the train station and everything passes by normally until you try to use your train card. The machine says user doesn't exist. That's odd,it has always worked before, why doesn't it work today? After many attempts you give up and turn away.
+	    As you are about to leave the station the boy following you yells, wait"+ name, "You can't miss your train, you'll be late for school!”
+	    Obviously very startled, you asked the boy a range of questions asking who he was and how he knew you.""")
+        boy_name = str(input("Enter what you would like the boy's name to be."))
+        print("He introduced himself as" + boy_name, "and explained that he had always been in your class but rarely spoke.\n" "Moving on, you ask him how you can enter the train without your card and he asks you to hold the end of his bag-pack and follow him. now, you have two options:"
+        "(1) Reaching school on time by following " +boy_name, "and seeing how he gets you two on the train" 
+         "(2) Being late to school by insisting that you would rather not go through the trouble of a random adventure before school and simply walking instead")
+        time_choice = str(input("Which number option do you choose? "))
+        if time_choice == "1":
+            print("""You have chosen the first option and follow""" + boy_name,"""trying to enter the train and will reach school on time. 
+You hold onto his bag like he asked and suddenly, you felt as though you were invisible.
+You paid no mind to it and just followed him. No one noticed you as he went through the entrance and entered the train. 
+This was all very confusing and frankly it was tiring as well but nevertheless, at least you got on the train, right?""")
+
+            print("""This was the end of the first stage, Star. Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.You enter the train with""" +boy_name, """and sit next to each other, continuing your conversations from earlier.
+The train was bumpier than usual, and faster than usual, and emptier than usual too, which was unusual as this is usually when trains are the most packed. You brushed it off and kept talking to""" +boy_name, 
+ """Suddenly, after going faster and faster, the train suddenly comes to a halt. 
+The train lights flicker and you hear a loud ringing noise. You held onto the railing so you are barely injured yet"""+boy_name, """seems unfazed. 
+
+What was going on?
+You stand up and try to open the doors but they won't budge,"""+boy_name, """idly stares outside the windows.
+You ask for his help angrily but he says there's no point. 
+What? 
+
+You were tired of his consistent vague remarks that made no sense.
+Nevertheless,""" +boy_name, """is yet again unbothered and tells you to look out of the window.
+'Do you really want to go out there?'
+Beyond them lay a barren desert of snow, immersed with pumas. 
+Feeling overwhelmed, you faint before ever finding out where you were.
+*Hours later* you wake up lying on the seats of the train, scared. Beside you is a mountain of snacks, presumably brought from the other train carts.
+You immediately get up and think about how this was his fault. 
+Him. 
+He caused this. 
+You didn't know how but you knew if you had just ignored him you wouldn't be in this, this nightmare.
+Somehow you manage to stay sane and in the moment. You have two options as to what you want to do:
+	
+	(1) Run through the other carts and try to find someone else
+	(2) stay with """ +boy_name, """ and figure out how to get the train working.""")
+            cart_choice = str(input("Which number option do you choose? "))
+            if cart_choice == ("1"):
+                print("You have chosen the first option and proceed to run through the other carts while"+boy_name,"repeatedly warns you not too.\n You open a cart and find a stranded puma that somehow got in.\n Hungry, the predator chases you and you are not able to escape.\n GAME OVER.")
+                sys.exit()
+            elif cart_choice == ("2"):
+                print("You have chosen the third option and stay with"+boy_name," inside the train, searching for a way to fix the train.\n *Years later* You have finally figured out how to fix the train. You live out the rest of your days in this mysterious world trying to find others and a way out. GAME OVER.")
+                sys.exit()
+            else: 
+                print("Your response is invalid. Please ensure you are answering with one of the two numbers.")
+                str(input("Which number option you choose? "))
+        elif time_choice == "2":
+            print("""You have chosen the second option and refuse the boy's help, leaving the station and walking to school instead. 
+You end up being late.
+ As you exit the station, you notice the sun has gone down and it is night time.
+ What?
+
+This was the end of the first stage, Star.
+Welcome to the second and final stage of The Dream Chapter: The Game. 
+This stage is titled Magic. Good luck.
+
+ Confused at how it is already night time, a sudden noise, or a lack thereof, gives you a bigger worry,
+ Where was everyone??? 
+All you could hear was the wind. 
+You turn around to look at the station in an attempt to find the boy but it’s empty.
+Just like everything else. 
+You run back home, thinking of your family, your friends, anyone and everyone,
+what was going on? 
+As you stop by the street across your house, you see the boy riding away into a forest on his bicycle, You yell at him but he can’t hear.
+You can smell smoke in the air and turn around to see the school is burning down. 
+You knew there was no point. 
+There’s no one else.
+ You spend the rest of your days alone in what seems to be a recurring nightmare , searching for the boy and trying to find a way out. GAME OVER.""")
+	
+	
+        else: 
+            print("Your response is invalid. Please ensure you are answering with one of the two numbers.")
+            str(input("Which number option you choose? "))
+
+    elif boy_choice == "2": 
+        print("You have chosen the second option and turn around to talk to the boy.\n You ask him what his name is and where he is going.")
+        boy_name = str(input("Enter what you would like the boy's name to be."))
+        print("""He casually introduced himself as""" + boy_name, """and explained that he had always been in your class but rarely spoke and was going to school, same as you. 
+
+With nothing better to do, you walk with him and talk to him all the way until you reach the station, resulting in you learning a lot of interesting things about him. Such as the fact that he was born with an illness giving him naturally purple hair and piercing yellow eyes.
+
+You wondered how you could ignore something like that for years...
+
+This was the end of the first stage, Star.
+Welcome to the second and final stage of The Dream Chapter: The Game. 
+This stage is titled Magic. Good luck.
+
+You enter the train with""" +boy_name, """and sit next to each other, continuing your conversations from earlier.
+The train was bumpier than usual, and faster than usual, and emptier than usual too, which was unusual as this is usually when trains are the most packed. You brushed it off and kept talking to""" +boy_name, 
+"""Suddenly, after going faster and faster, the train suddenly comes to a halt. 
+The train lights flicker and you hear a loud ringing noise. You held onto the railing so you are barely injured yet"""+boy_name, """seems unfazed. 
+
+What was going on?
+You stand up and try to open the doors but they won't budge,"""+boy_name, """idly stares outside the windows.
+You ask for his help angrily but he says there's no point. 
+What? 
+
+You were tired of his consistent vague remarks that made no sense.
+
+Nevertheless,""" +boy_name, """is yet again unbothered and tells you to look out of the window.
+‘You won’t stay will you? They never do.’
+
+Beyond you lay a mystical flower forest, plastered with random colors. You can see a pretty cottage in the distance.
+Feeling overwhelmed, you faint before ever finding out where you were.
+
+*Hours later* you wake up lying on the seats of the train, scared. Beside you is a mountain of snacks, presumably brought from the other train carts.
+
+You immediately get up and think about how this where you are and if you are still there.""" +boy_name, """starts talking.
+‘It’s pretty, no? Even though I see this place every day, it never fails to amaze me. Oh, I’d better explain what’s going on. 
+This is where I live!, you came here by luck and if you choose to stay here, you can stay young forever! 
+You can live out your life here in this beautiful magical forest and never grow up, or,
+Or you can leave, that’s what the majority do…
+It’s completely your choice though! So don’t worry! 
+So what will it be?
+	
+	(1) Stay with """ +boy_name, """ in the flower filled forest
+	(2) Leave and go back to the life you always had""")
+    flower_choice = str(input("Which number option do you choose? "))
+    if flower_choice == "1":
+        print("You have chosen the first option and have chosen to stay with"+boy_name, ".\n You live happily ever after exploring this new world you knew nothing about. \nGAME OVER.")
+
+        
+    elif flower_choice == "2":
+        print("""You have chosen the second option and choose to leave this new world.
+You get back on the train and"""+boy_name,""" picks out a makeshift bouquet of flowers to give to you, as a memory,
+before shutting the train car door and sending you back to your world.
+
+Years pass and you wake up every day thinking about what would have happened if you had chosen to stay, you sometimes think it was all a dream but the flowers hung on your wall say otherwise. 
+
+GAME OVER.""")
+
+
+    else: 
         print("Your response is invalid. Please ensure you are answering with one of the two numbers.")
         str(input("Which number option you choose? "))
-
-elif boy_choice == "2":
-    print("You have chosen the second option and turn around to talk to the boy.\n You ask him what his name is and where he is going.")
-    boy_name = str(input("Enter what you would like the boy's name to be."))
-    print("He casually introduced himself as" + boy_name, "and explained that he had always been in your class but rarely spoke and was going to school, same as you. With nothing better to do, you walk with him and talk to him all the way until you reach the station, resulting in you learning a lot of interesting things about him. Such as the fact that he was born with an illness giving him naturally purple hair and piercing yellow eyes. You wondered how you could ignore something like that for years...\n From then on, everything was normal.")
-    print("\n This was the end of the first stage, Star.\n Welcome to the second stage of The Dream Chapter: The Game. This stage is titled Magic. Good luck.\nYou enter the train with" +boy_name, "and sit next to each other, continuing your conversations from earlier\n ")
-
-else:
-    print("Your response is invalid. Please ensure you are answering with one of the two numbers.")
-    str(input("Which number option you choose? "))
